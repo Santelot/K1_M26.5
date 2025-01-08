@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .banner {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .banner .title {
+            font-size: 1.2em;
+            display: flex;
+            justify-content: space-between;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            margin-top: 5px;
+            border-top: 1px solid white;
+            padding-top: 5px;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .step-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .dialogue {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: right;
+            font-style: italic;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown select {
+            font-size: 1em;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Playbook - K1 - M26.5</h1>
+
+        <div class="dropdown">
+            <label for="class-time">Tiempo efectivo de Clase:</label>
+            <select id="class-time" onchange="updateContent()">
+                <option value="50">50 minutos</option>
+                <option value="40">40 minutos</option>
+                <option value="30">30 minutos</option>
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <label for="class-level">Nivel:</label>
+            <select id="class-level" onchange="updateContent()">
+                <option value="K1">K1</option>
+                <option value="K2">K2</option>
+                <option value="K3">K3</option>
+            </select>
+        </div>
+
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+        <h2 id="selected-level" class="level-title">Nivel: K1</h2>
+
+        <!-- ............................................Aquí empezarán las actividades........................................... -->
+
+<!-- Actividad 0 -->
+<div id="activity-0" class="activity">
+    <div class="banner" onclick="toggleContent('revision_materiales')">
+        <div class="title">📚 Actividad 0: Revisión de Materiales ⏰ Tiempo: N/A</div>
+        <div class="subtitle">Asegúrate de tener listos todos los materiales indicados en la DIAPOSITIVA 1 antes de iniciar la misión.</div>
+    </div>
+    <div id="revision_materiales" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (N/A):</strong> Asegúrate de tener listos todos los materiales indicados en la Diapositiva 1 antes de iniciar la misión.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 1 -->
+<div id="activity-1" class="activity">
+    <div class="banner" onclick="toggleContent('bienvenida')">
+        <div class="title">🎉 Actividad 1: Bienvenida e Introducción ⏰ Tiempo: 1 minuto</div>
+        <div class="subtitle">Dar la bienvenida a los niños, presentar el enfoque del día y preparar sus mentes para la actividad.</div>
+    </div>
+    <div id="bienvenida" class="content">
+        <table>
+            <tr>
+                 <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la Diapositiva 2 “Bienvenida” y saluda a los niños mientras muestras el logo de Gnius Club, luego introduce el tema del día y la necesidad de entrenar el cerebro para la misión.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Hola, Genios del CODE SQUAD! ¡Bienvenidos al Jardín de las Flores Gigantes! Hoy, vamos a ayudar a la oruguita Carmela a recorrer su camino favorito lleno de flores hermosas. Para ello, entrenaremos nuestros cerebros y aprenderemos sobre bucles. ¿Listos para esta nueva aventura?"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (0.5 minutos):</strong> Reproduce la Diapositiva 3 "Gimnasio CODE SQUAD" e introduce la importancia de entrenar el cerebro antes de enfrentar el reto del día.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Excelente, equipo! Antes de ir al jardín, vamos a preparar nuestras mentes en el Gimnasio del CODE SQUAD. Escuchen con atención la canción, que nos guiará con movimientos especiales para pensar mejor. ¡Vamos a activarnos para que Carmela llegue a todas las flores!"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 2 -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('baile-secuenciacion')">
+        <div class="title">🎶 Actividad 2: Baile de Algoritmos ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Preparar a los niños para la misión con un ejercicio de algoritmos a través de un baile.</div>
+    </div>
+    <div id="baile-secuenciacion" class="content">
+        <table>
+            <tr>
+                 <td><strong>PASO 1 (2 minutos):</strong> Reproduce la Diapositiva 4 “Baile de Algoritmos” e introduce la canción que seguiremos hoy.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Es hora de movernos, Genios! La canción que escucharemos ahora es muy especial, y nos guiará con movimientos repetitivos.  Sigan los pasos con atención, ya que esto nos ayudará a entender cómo los bucles funcionan en el camino de Carmela. ¡Prepárense para bailar y aprender con alegría!"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 3 -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('planteamiento-problema')">
+        <div class="title">🐛 Actividad 3: Planteamiento del Problema ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Introducir a los niños en el contexto de la misión utilizando la historia.</div>
+    </div>
+    <div id="planteamiento-problema" class="content">
+        <table>
+            <tr>
+                 <td><strong>PASO 1 (1 minuto):</strong> Reproduce la DIAPOSITIVA 5, adopta la actitud de cuenta cuentos y narra la historia.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> 
+                "¡Genios del CODE SQUAD! Llegamos al Jardín de las Flores Gigantes, un lugar lleno de color y belleza. Aquí vive nuestra amiga la oruguita Carmela, quien ama recorrer su camino favorito lleno de flores maravillosas.  Pero, ¡oh no!,  un viento fuerte ha movido algunas baldosas de su camino y ahora Carmela no sabe cómo llegar a su flor favorita. ¡Necesitamos su ayuda para crear un camino con patrones que se repiten!"
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Reproduce la DIAPOSITIVA 6 y explica el reto para motivar al CODE SQUAD.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> 
+                "¡Equipo CODE SQUAD! El camino de Carmela está formado por baldosas con diferentes movimientos: avanzar, girar y oler una flor.  Usaremos fichas de ruta para representar estos movimientos y la ficha de retorno para indicar que una serie de movimientos se repiten en bucle.  Con la ayuda de Dart, vamos a crear el camino perfecto para que Carmela llegue a su flor favorita. ¡Manos a la obra, genios!"
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 4 -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('formacion-parejas')">
+        <div class="title">🤝 Actividad 4: Formación de Parejas ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Explicar la importancia del trabajo en equipo en parejas y asegurar la organización.</div>
+    </div>
+    <div id="formacion-parejas" class="content">
+        <table>
+            <tr>
+                 <td><strong>PASO 1 (2 minutos):</strong> Reproduce la DIAPOSITIVA 7 “Formación de Equipos”, explica la importancia de trabajar en equipo y junta a los niños en pares. Si el número es impar, integra un trío para asegurar que todos tengan compañeros.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> 
+                "¡Genios del CODE SQUAD! Recuerden que, 'si dos cabezas piensan, la solución será genial'.  Para crear el camino de Carmela, vamos a trabajar en parejas, así podrán compartir sus ideas y encontrar las mejores soluciones.  Busquen a su compañero y levanten la mano. Si alguien no tiene pareja, ¡yo les ayudaré a formar un trío!"
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Verifica que todos los niños estén emparejados y organizados para trabajar.</td>
+                 <td><strong>DIÁLOGO SUGERIDO:</strong> 
+                "¡Perfecto, todos tienen su compañero! Recuerden, trabajar juntos significa ayudarse, escucharse y compartir sus ideas. Mientras más trabajen en equipo, más fácil será programar el camino para Carmela.  ¡Prepárense para esta nueva misión en el jardín!"
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 5 -->
+<div id="activity-5" class="activity">
+    <div class="banner" onclick="toggleContent('codigo_visual')">
+        <div class="title">🎨 Actividad 5: Reto de Codificación ⏰ Tiempo: Variable <span id="activity-5-total-time">Variable según el nivel</span></div>
+        <div class="subtitle">Introducir los retos de codificación según la edad y trabajar con fichas de ruta.</div>
+    </div>
+    <div id="codigo_visual" class="content">
+        <table id="activity-5-content">
+            <!-- Contenido insertado dinámicamente por JavaScript -->
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 6 -->
+<div id="activity-6" class="activity">
+    <div class="banner" onclick="toggleContent('intercambio_construccion')">
+        <div class="title">🔄 Actividad 6: Intercambio de Códigos y Construcción ⏰ Tiempo: Variable <span id="activity-6-total-time">Variable según el nivel</span></div>
+        <div class="subtitle">Intercambio de códigos entre equipos y práctica de programación con fichas de ruta.</div>
+    </div>
+    <div id="intercambio_construccion" class="content">
+        <table id="activity-6-content">
+            <!-- Contenido insertado dinámicamente por JavaScript -->
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 7 -->
+<div id="activity-7" class="activity">
+    <div class="banner" onclick="toggleContent('obstaculo_historia')">
+        <div class="title">⚠️ Actividad 7: Mensaje del Cuartel ⏰ Tiempo: Variable <span id="activity-7-total-time">Variable según el nivel</span></div>
+        <div class="subtitle">Introducir un obstáculo en la narrativa para mantener el interés y la motivación.</div>
+    </div>
+    <div id="obstaculo_historia" class="content">
+        <table id="activity-7-content">
+            <!-- Contenido insertado dinámicamente por JavaScript -->
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 8 -->
+<div id="activity-8" class="activity">
+    <div class="banner" onclick="toggleContent('conclusion_reflexion')">
+        <div class="title">🏁 Actividad 8: Conclusión de la Historia y Reflexión ⏰ Tiempo: 5 minutos</div>
+        <div class="subtitle">Cierre de la misión y reflexión sobre lo aprendido durante la clase.</div>
+    </div>
+    <div id="conclusion_reflexion" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (5 minutos):</strong> Reproduce la DIAPOSITIVA 25 y cierra la historia como cuenta cuentos. Realiza preguntas para reflexionar sobre lo aprendido.</td>
+                 <td><strong>DIÁLOGO SUGERIDO:</strong> 
+                    "¡Genios del CODE SQUAD! ¡Lo hemos logrado! Gracias a su excelente trabajo, Carmela ha recorrido su camino favorito y está disfrutando de todas las flores hermosas.  Qué gran trabajo en equipo han hecho. Antes de despedirnos, reflexionemos un poco sobre lo aprendido hoy:
+- ¿Por qué fue importante repetir algunos movimientos del camino en bucle?
+- ¿Qué ficha nos ayudó a indicar cuándo un movimiento se repite?
+- ¿Cómo nos ayudó trabajar en equipo para resolver el reto de Carmela en el jardín? ¡Son los mejores programadores de caminos que conozco!"
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+               <!-- ............................................Aquí terminarán las actividades........................................... -->
+
+    </div>
+
+<script>
+    function toggleContent(id) {
+        var content = document.getElementById(id);
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            } else {
+            content.style.display = "block";
+        }
+    }
+
+    function updateContent() {
+        var time = document.getElementById("class-time").value;
+        var level = document.getElementById("class-level").value;
+        document.getElementById("selected-time").innerText = "Tiempo efectivo de clase: " + time + " minutos";
+        document.getElementById("selected-level").innerText = "Nivel: " + level;
+
+        var steps = {
+    "K1": {
+        "5.1": [
+            {
+                "step": 1,
+                 "time": { "30": 1, "40": 1, "50": 1 },
+                 "accion":"Reproduce la DIAPOSITIVA 8 y explica cómo crear el código para resolver el reto.",
+                 "dialogo":"¡CODE SQUAD! Para ayudar a Carmela, vamos a crear un código con fichas de camino para indicar sus movimientos: caminar, girar y oler las flores. Usaremos la ficha recta para caminar, la de esquina para girar y la curva simple para oler las flores.  La ficha de retorno indica que un movimiento o secuencia de movimientos se repite. ¡Comencemos a crear el camino mágico de Carmela!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 2, "40": 2, "50": 2 },
+                 "accion":"Reproduce la DIAPOSITIVA 9, distribuye los materiales y asegúrate de que todos tengan lo necesario.",
+                "dialogo":"¡Aquí tienen sus hojas y colores, Genios! Dibujen los movimientos (caminar, girar y oler las flores) y la ficha que representará cada uno. ¡Prepárense para codificar el camino de Carmela!"
+            },
+            {
+                "step": 3,
+                 "time": { "30": 5, "40": 10, "50": 10 },
+                 "accion":"Reproduce la DIAPOSITIVA 10 y supervisa la creación del código en pares. Ayuda a los equipos mientras dibujan y asignan fichas de ruta.",
+                "dialogo":"¡Excelente, CODE SQUAD! Dibujen cada movimiento del camino y al lado dibujen la ficha que lo representa: recta para caminar, esquina para girar, y curva simple para oler las flores.  La ficha de retorno es para la repetición. ¡Hagamos que Carmela llegue a su flor favorita!"
+            }
+         ],
+        "6": [
+            {
+                "step": 1,
+                 "time": { "30": 2, "40": 2, "50": 2 },
+                 "accion":"Reproduce la DIAPOSITIVA 17 y dirige a los Genios para que intercambien los códigos que hicieron.",
+                 "dialogo":"¡CODE SQUAD! ¡Sus códigos son increíbles! Ahora, vamos a intercambiarlos para que Carmela tenga diferentes rutas. Yo recogeré sus hojas y las daré a otros equipos. ¡Así, todos ayudaremos a Carmela a recorrer el jardín!"
+            },
+             {
+                "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                 "accion":"Reproduce la DIAPOSITIVA 18 y distribuye los códigos asignados para que cada equipo comience a construir.",
+                 "dialogo":"¡Genios, es hora de construir el camino de Carmela! Usen el código que recibieron para colocar las fichas: la recta para caminar, la esquina para girar, la curva simple para oler las flores y la ficha de retorno para indicar la repetición en bucle.  ¡Ayudemos a Carmela a recorrer el jardín!"
+            }
+          ],
+        "7": [
+            {
+                "step": 1,
+                "time": { "30": 3, "40": 4, "50": 5 },
+                 "accion":"Reproduce la DIAPOSITIVA 21 y explica el obstáculo a los Genios.",
+                "dialogo":"¡CODE SQUAD! ¡Atención! Justo cuando Carmela iba a empezar a recorrer su camino, un grupo de mariposas movió algunas baldosas y ahora la ruta está desordenada. ¡Oh, no!  Pero no se preocupen, el cuartel general nos ha enviado un código de rescate para organizar el camino. ¡Vamos a trabajar en equipo para resolverlo!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                "accion":"Reproduce la DIAPOSITIVA 22 “Código de Rescate K1” y motiva a los Genios que sigan el nuevo código proyectado en la pantalla.",
+                "dialogo":"¡Genios del CODE SQUAD! Aquí tienen el código de rescate. Usen las fichas de ruta: recta para caminar, de esquina para girar, curvas simples para oler las flores y la de retorno para los bucles. Sigan el código y ayuden a Carmela a llegar a su flor favorita. ¡Ustedes pueden hacerlo!"
+            }
+          ]
+    },
+   "K2": {
+        "5.2": [
+            {
+                "step": 1,
+                 "time": { "30": 1, "40": 1, "50": 1 },
+                 "accion":"Reproduce la DIAPOSITIVA 11 y explica cómo crear el código para resolver el reto.",
+                "dialogo":"¡CODE SQUAD! Para ayudar a Carmela a recorrer su camino en el jardín, vamos a crear un código más avanzado. Usaremos las fichas de camino para representar sus movimientos: caminar, girar, oler una flor y avanzar hacia otra flor. La recta para caminar, la de esquina para girar, la curva simple para oler una flor y la ficha de retorno para indicar los bucles. ¡Vamos a diseñar un camino lleno de magia!"
+            },
+            {
+                 "step": 2,
+                 "time": { "30": 2, "40": 2, "50": 2 },
+                 "accion":"Reproduce la DIAPOSITIVA 12, distribuye los materiales y asegúrate de que todos tengan lo necesario.",
+                 "dialogo":"¡Aquí tienen sus hojas y colores, Genios! Dibujen los movimientos (caminar, girar, oler una flor y avanzar a otra flor) y la ficha que representará cada uno. ¡Prepárense para crear el mejor camino para Carmela!"
+            },
+            {
+                 "step": 3,
+                 "time": { "30": 5, "40": 10, "50": 10 },
+                "accion":"Reproduce la DIAPOSITIVA 13 y supervisa la creación del código en pares. Ayuda a los equipos mientras dibujan y asignan fichas de ruta.",
+                "dialogo":"¡Excelente trabajo, equipo! Recuerden, cada movimiento tiene su ficha: la recta para caminar, la esquina para girar, la curva simple para oler las flores y la ficha de retorno para los bucles.  Dibújenlo con cuidado y creemos un camino maravilloso para Carmela!"
+            }
+         ],
+        "6": [
+            {
+                 "step": 1,
+                 "time": { "30": 2, "40": 2, "50": 2 },
+                 "accion":"Reproduce la DIAPOSITIVA 17 y dirige a los Genios para que intercambien los códigos que hicieron.",
+                "dialogo":"¡CODE SQUAD! ¡Sus códigos son fantásticos!  Ahora, para que Carmela tenga muchas rutas para elegir, vamos a intercambiar los códigos. Yo recogeré sus creaciones y se las daré a otro equipo. ¡Así, todos ayudaremos a Carmela a explorar el jardín!"
+            },
+            {
+                 "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                 "accion":"Reproduce la DIAPOSITIVA 19 y distribuye los códigos asignados para que cada equipo comience a construir.",
+                 "dialogo":"¡Es hora de construir! Usen el código que recibieron para crear el camino de Carmela en el jardín. Coloquen las fichas: recta para caminar, esquina para girar, curva simple para oler las flores y la ficha de retorno para los bucles.  ¡Vamos a guiar a Carmela por el jardín mágico!"
+            }
+          ],
+        "7": [
+             {
+                 "step": 1,
+                 "time": { "30": 3, "40": 4, "50": 5 },
+                 "accion":"Reproduce la DIAPOSITIVA 21 y explica el obstáculo a los Genios.",
+                 "dialogo":"¡CODE SQUAD! ¡Atención! Unas mariposas traviesas han movido algunas baldosas del camino de Carmela, ¡oh no! Pero no se preocupen, el cuartel general nos ha enviado un código de rescate para que Carmela pueda seguir su recorrido. ¡Vamos a trabajar juntos y a poner el camino en orden!"
+            },
+            {
+                 "step": 2,
+                 "time": { "30": 7, "40": 10, "50": 10 },
+                 "accion":"Reproduce la DIAPOSITIVA 23 “Código de Rescate K2” y motiva a los Genios que sigan el nuevo código proyectado en la pantalla.",
+                 "dialogo":"¡Genios del CODE SQUAD!  Aquí tienen el código de rescate. Sigan las indicaciones y usen las fichas: recta para caminar, de esquina para girar, curvas simples para oler las flores y de retorno para los bucles. ¡Vamos a ayudar a Carmela a completar su camino en el jardín!"
+            }
+         ]
+    },
+    "K3": {
+        "5.3": [
+            {
+                 "step": 1,
+                 "time": { "30": 1, "40": 1, "50": 1 },
+                 "accion":"Reproduce la DIAPOSITIVA 14 y explica cómo crear el código para resolver el reto.",
+                 "dialogo":"¡CODE SQUAD!  Vamos a crear un código más completo para el camino de Carmela. Usaremos fichas de ruta para representar los movimientos: caminar, girar, oler una flor, ir hacia otra flor y rodear una flor. La ficha recta para caminar, la de esquina para girar, la curva simple para oler una flor, la de curva doble para avanzar a otra flor y la de retorno para indicar la repetición en bucle.  ¡Vamos a programar el camino mágico de Carmela!"
+            },
+            {
+                "step": 2,
+                 "time": { "30": 2, "40": 2, "50": 2 },
+                 "accion":"Reproduce la DIAPOSITIVA 15, distribuye los materiales y asegúrate de que todos tengan lo necesario.",
+                 "dialogo":"¡Aquí tienen sus hojas y colores, Genios! Dibujen los movimientos (caminar, girar, oler una flor, avanzar a otra flor y rodear una flor) y la ficha que representa cada uno. ¡Prepárense para crear un camino increíble!"
+            },
+            {
+                "step": 3,
+                 "time": { "30": 5, "40": 10, "50": 10 },
+                "accion":"Reproduce la DIAPOSITIVA 16 y supervisa la creación del código en pares. Ayuda a los equipos mientras dibujan y asignan fichas de ruta.",
+                "dialogo":"¡Excelente trabajo, CODE SQUAD! Cada movimiento tiene su ficha: la recta para caminar, la esquina para girar, la curva simple para oler una flor, la doble curva para avanzar a otra flor y la ficha de retorno para los bucles.  ¡Dibújenlo con atención y hagamos que el camino de Carmela sea maravilloso!"
+            }
+          ],
+        "6": [
+            {
+                "step": 1,
+                 "time": { "30": 2, "40": 2, "50": 2 },
+                 "accion":"Reproduce la DIAPOSITIVA 17 y dirige a los Genios para que intercambien los códigos que hicieron.",
+                "dialogo":"¡CODE SQUAD! ¡Sus códigos son geniales! Para que Carmela disfrute aún más su camino, vamos a intercambiar nuestros códigos. Yo los recogeré y se los daré a otro equipo.  ¡Así, todos crearemos diferentes rutas para Carmela!"
+            },
+            {
+                "step": 2,
+                 "time": { "30": 7, "40": 10, "50": 10 },
+                "accion":"Reproduce la DIAPOSITIVA 20 y distribuye los códigos asignados para que cada equipo comience a construir.",
+                "dialogo":"¡Es hora de construir, Genios!  Usen el código que recibieron para crear el camino de Carmela.  Coloquen las fichas en el orden correcto: recta para caminar, esquina para girar, curva simple para oler una flor, curva doble para avanzar a otra flor y la ficha de retorno para los bucles. ¡Vamos a hacer que Carmela llegue a todas las flores!"
+            }
+         ],
+        "7": [
+            {
+                "step": 1,
+                 "time": { "30": 3, "40": 4, "50": 5 },
+                 "accion":"Reproduce la DIAPOSITIVA 21 y explica el obstáculo a los Genios.",
+                 "dialogo":"¡CODE SQUAD! ¡Alerta en el jardín! Unas mariposas traviesas han movido algunas baldosas del camino de Carmela y ahora su ruta es un desastre, ¡Oh no!  Pero el cuartel general nos envió un nuevo código para que podamos arreglar todo. ¡Vamos a trabajar juntos para resolver este reto!"
+            },
+            {
+                "step": 2,
+                 "time": { "30": 7, "40": 10, "50": 10 },
+                "accion":"Reproduce la DIAPOSITIVA 24 y motiva a los Genios a construir el nuevo código con bloques siguiendo el patrón proyectado.",
+                 "dialogo":"¡Genios del CODE SQUAD!  Aquí tienen el código de rescate del cuartel. Usen las fichas de ruta: recta para caminar, esquinas para girar, curvas simples para oler las flores, dobles curvas para avanzar a otra flor y las fichas de retorno para los bucles.  Sigan el código con cuidado y ayuden a Carmela a llegar a su flor favorita. ¡Ustedes son increíbles!"
+            }
+         ]
+    }
+};
+
+
+
+        // Mostrar u ocultar actividades según el nivel seleccionado
+        var activities = {
+            "activity-0": true,
+            "activity-1": true,
+            "activity-2": true,
+            "activity-3": true,
+            "activity-4": true,
+            "activity-5": true,
+            "activity-6": true,
+            "activity-7": steps[level]["7"].some(s => s.time[time] > 0),
+            "activity-8": true
+        };
+
+        Object.keys(activities).forEach(function(activityId) {
+            var activityElement = document.getElementById(activityId);
+            if (activities[activityId]) {
+                activityElement.style.display = "block";
+            } else {
+                activityElement.style.display = "none";
+            }
+        });
+
+        // Renderizar los pasos dinámicamente en las tablas de actividades 5, 6 y 7
+        renderActivitySteps("activity-5-content", steps[level]["5." + (level === "K1" ? 1 : level === "K2" ? 2 : 3)], time);
+        renderActivitySteps("activity-6-content", steps[level]["6"], time);
+        renderActivitySteps("activity-7-content", steps[level]["7"], time);
+
+        document.getElementById("activity-5-total-time").innerText = calculateTotalTime(steps[level]["5." + (level === "K1" ? 1 : level === "K2" ? 2 : 3)], time) + " minutos";
+        document.getElementById("activity-6-total-time").innerText = calculateTotalTime(steps[level]["6"], time) + " minutos";
+        document.getElementById("activity-7-total-time").innerText = calculateTotalTime(steps[level]["7"], time) + " minutos";
+    }
+
+    function renderActivitySteps(contentId, steps, time) {
+        var contentContainer = document.getElementById(contentId);
+        contentContainer.innerHTML = "";
+        steps.forEach(function(step) {
+            if (step.time[time] > 0) {
+                var row = document.createElement("tr");
+                var stepCell = document.createElement("td");
+                var dialogCell = document.createElement("td");
+
+                stepCell.innerHTML = "<strong>PASO " + step.step + " (" + step.time[time] + " minutos):</strong> " + step.accion;
+                dialogCell.innerHTML = "<strong>DIÁLOGO SUGERIDO:</strong> " + step.dialogo;
+
+                row.appendChild(stepCell);
+                row.appendChild(dialogCell);
+                contentContainer.appendChild(row);
+            }
+        });
+    }
+
+    function calculateTotalTime(steps, time) {
+        return steps.reduce((total, step) => total + step.time[time], 0);
+    }
+
+    updateContent();
+</script>
